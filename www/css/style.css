@@ -4,6 +4,7 @@
 .ytp-youtube-button.ytp-button.yt-uix-sessionlink.ytp-red2 {
 	     display: none!important; 
     /*background: red;*/
+    background: none!important;
 }
 .ytp-chrome-controls .ytp-button.ytp-youtube-button.ytp-red2 {
 	display: none !important;

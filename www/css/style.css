@@ -1,1 +1,10 @@
-/* Empty. Add your own CSS if you like */
+.red {
+	color: red;
+}
+.ytp-youtube-button.ytp-button.yt-uix-sessionlink.ytp-red2 {
+	     display: none!important; 
+    /*background: red;*/
+}
+.ytp-chrome-controls .ytp-button.ytp-youtube-button.ytp-red2 {
+	display: none !important;
+}

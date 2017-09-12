@@ -1,7 +1,9 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPopup) {
-
+  $scope.playmyvedio = function(){
+    VideoPlayer.play("file:///android_asset/www/movie.mp4");
+  }
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,10 +29,72 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    // controller: 'AppCtrl',
+    controller: 'hide'
   })
 
-  .state('app.search', {
+  
+
+  .state('app.carton', {
+      url: '/carton',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/carton.html',
+           controller: 'show'
+        }
+      }
+    })
+
+  // .state('app.display', {
+  //     url: '/display',
+  //     views: {
+  //       'menuContent': {
+  //         templateUrl: 'templates/display.html'
+  //       }
+  //     }
+  //   })
+  .state('app.poetry', {
+      url: '/poetry',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/poetry.html'
+        }
+      }
+    })
+  .state('app.nfa-khan', {
+      url: '/nfa-khan',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/nfa-khan.html'
+        }
+      }
+    })
+  .state('app.funny', {
+      url: '/funny',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/funny.html'
+        }
+      }
+    })
+  .state('app.download', {
+      url: '/download',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/download.html'
+        }
+      }
+    })
+    .state('app.romantic', {
+      url: '/romantic',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/romantic.html',
+          
+        }
+      }
+    })
+    .state('app.search', {
     url: '/search',
     views: {
       'menuContent': {
@@ -41,34 +103,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
-  .state('app.browse', {
-      url: '/browse',
+    .state('app.about', {
+      url: '/about',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/about.html'
         }
       }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
+    });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/search');
 });

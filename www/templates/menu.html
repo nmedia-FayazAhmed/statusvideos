@@ -1,36 +1,61 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="false" >
   <ion-side-menu-content>
-    <ion-nav-bar class="bar bar-stable bar-dark">
+    <ion-nav-bar class="bar bar-stable bar-assertive">
       <ion-nav-back-button>
       </ion-nav-back-button>
 
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
+
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-android-more-vertical" menu-toggle="right" ng-click="openPopover($event)">
+        </button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
+  <ion-side-menu side="left" class="bar.bar-stable.bar-dark.bar-header">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Menu</h1>
     </ion-header-bar>
-    <ion-content>
-      <ion-list>
-        <ion-item menu-close ng-click="showAlert()">
-          Login
-        </ion-item>
+    <ion-content class="custom">
+      <ion-list >
+        
         <ion-item menu-close href="#/app/search">
-          Search
+          <i class="icon ion-ios-home"> Home</i>
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        
+        
+        <ion-item menu-close href="#/app/romantic">
+        <i class="icon ion-heart"> Romanitc</i>
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/app/carton">
+          <i class="icon ion-happy-outline"> Carton</i>
         </ion-item>
+        <ion-item menu-close href="#/app/poetry">
+        Peotry
+        </ion-item>
+        <ion-item menu-close href="#/app/nfa-khan">
+        NFA-khan
+        </ion-item>
+        <ion-item menu-close href="#/app/funny">
+        Funny
+        </ion-item>
+        
+        
+        <ion-item menu-close href="#/app/download">
+       <i class="icon ion-android-archive"> Download </i>
+        </ion-item>
+        <ion-item menu-close href="#/app/about">
+       <i class="icon ion-ios-home"> About </i>
+        </ion-item>
+        
       </ion-list>
+      <button ng-click="display()">gd</button>
+
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>

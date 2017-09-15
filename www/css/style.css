@@ -9,3 +9,11 @@
 .ytp-chrome-controls .ytp-button.ytp-youtube-button.ytp-red2 {
 	display: none !important;
 }
+.bar.bar-stable.bar-dark.bar-header
+{
+    background-color: #f10808;
+}
+.scroll-content.ionic-scroll.has-header
+{
+	background-color: #564343;
+}
